@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgba(245, 245, 245, 0.867);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::selection {
+  background-color: #662cd1;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 700px;
+  margin: 40px auto;
+  color: #662cd1;
 }
 
-.App-link {
-  color: #61dafb;
+.error-text{
+  color: #ff0000;
 }
 
-@keyframes App-logo-spin {
-  from {
+.header h1 span {
+  text-shadow: 0 0 11px rgba(131, 40, 236, 0.9);
+  color: #fff;
+  -webkit-text-stroke-color: #662cd1;
+  -webkit-text-stroke-width: 0.2px;
+}
+
+.search-con {
+  width: 80%;
+}
+
+.search-con form {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-con form input {
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.1);
+  width: 87%;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+.search-con form button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #662cd1;
+}
+
+.search-con form button svg {
+  height: 30px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.search-con form button svg:hover {
+  transform: scale(1.4);
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.product {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.product img {
+  width: 250px;
+  border-radius: 8px;
+  height: 80%;
+}
+
+.product .details {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 55%;
+  height: 100%;
+}
+
+.product .details p {
+  gap: 10px;
+  width: 100%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+
+.product .details p span {
+  width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product .details button {
+  width: 115px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #824ee3;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product .details button:hover {
+  background-color: #875fd1;
+}
+
+.product .details button svg {
+  height: 20px;
+}
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #662cd1;
+  border-color: #662cd1 transparent #662cd1 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
