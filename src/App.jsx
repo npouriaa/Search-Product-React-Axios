@@ -9,7 +9,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [dataArray, setDataArray] = useState([]);
   const [error, setError] = useState();
-  
+
   //refs
   const inputRef = useRef();
 
@@ -47,7 +47,7 @@ const App = () => {
                   brand : <span>{item.brand}</span>
                 </p>
                 <p>
-                  price : <span>{item.price}</span>
+                  price : <span>{item.price}$</span> 
                 </p>
                 <p>
                   description : <span>{item.description}</span>
